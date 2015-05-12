@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+h2 {
+  font-size: 2.6em;
+}
+
+.spacer {
+  padding-top: 1.2em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
