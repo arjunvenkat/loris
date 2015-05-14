@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/classes' => 'pages#classes'
   get '/classes/html' => 'pages#html'
+  get '/html' => 'pages#html'
+  get '/structure' => 'pages#structure'
+  get '/pricing' => 'pages#pricing'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
