@@ -3,4 +3,7 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def classes
+    @course_idea = CourseIdea.new
+  end
 end

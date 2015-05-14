@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @course_idea.email %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @course_idea.content %>
+</p>
+
+<%= link_to 'Edit', edit_course_idea_path(@course_idea) %> |
+<%= link_to 'Back', course_ideas_path %>

@@ -76,6 +76,11 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
   position: relative;
 }
 
+.panel-body hr {
+  margin-top: 1em;
+  margin-bottom: 1.4em;
+}
+
 .class-list-btn {
   position: relative;
   bottom: 3px;
@@ -90,7 +95,21 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     bottom: 3px;
     right: 3px;
   }
+}
 
+/* Forms */
+
+textarea, textarea.form-control {
+  box-shadow: none;
+  border: 1px solid lightgray;
+  border-radius: 0.25em;
+  padding: 0.4em;
+}
+
+textarea:focus, textarea.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #4caf50;
 }
 
 
