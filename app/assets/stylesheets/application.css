@@ -14,6 +14,8 @@
  *= require_self
  */
 
+/* Global */
+
 h1 {
   font-size: 3.2em;
 }
@@ -29,17 +31,30 @@ h3 {
 h4 {
   font-size: 1.8em;
 }
+
+body {
+  padding-top: 66px;
+}
 .spacer {
   padding-top: 1.2em;
 }
+
+/* Navbar */
+
+.navbar .container-fluid {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 .landing-copy p {
   line-height: 1.6;
   font-size: 1.4em;
 }
 
-.jumbotron .logo {
+.jumbotron .main-heading {
   color: #4caf50;
+  font-size: 4em;
 }
 
 .form-inline .form-control {
@@ -53,4 +68,27 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 
 .course-img {
   height: 100px;
+}
+
+
+/* Class page */
+.panel-box {
+  position: relative;
+}
+
+.class-list-btn {
+  position: relative;
+  bottom: 3px;
+  left: 0px;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .class-list-btn {
+    position: absolute;
+    left: auto;
+    bottom: 3px;
+    right: 3px;
+  }
+
 }
