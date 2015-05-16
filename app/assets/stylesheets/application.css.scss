@@ -18,6 +18,7 @@
 
 h1 {
   font-size: 3.2em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -39,11 +40,14 @@ body {
   padding-top: 1.2em;
 }
 
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+  border-color: #4caf50;
+}
+
 /* Navbar */
 
 .navbar .container-fluid {
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 1170px;
 }
 
 
