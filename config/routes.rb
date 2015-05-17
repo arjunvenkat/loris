@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/classes' => 'pages#classes'
   get '/classes/html' => 'pages#html'
   get '/html' => 'pages#html'
+  get '/rails_1' => 'pages#rails_1'
   get '/structure' => 'pages#structure'
   get '/pricing' => 'pages#pricing'
   # The priority is based upon order of creation: first created -> highest priority.
