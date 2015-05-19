@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1 class="main-heading">Learn to code by building your own projects</h1>
+        <h1 class="main-heading">Learn to code by designing and building your own projects</h1>
         <!-- <h2>learn to code by building your own projects</h2> -->
         <%= form_for(@contact, html: {class: 'form-inline spacer'} ) do |f| %>
           <% if @contact.errors.any? %>
@@ -37,12 +37,11 @@
       <section class="impt-copy">
         <p>Loris is an online technology school. You'll learn by coming up with your <strong>own</strong> ideas and making them real with code.</p>
 
-
         <p>It's not fun to work on projects created by other people. But designing your own projects from scratch can be hard. We're here to make sure you build something awesome.</p>
 
         <p>Our coaches will help you come up with interesting ideas, then give you tips and practice so you get the skills to turn those ideas into reality.</p>
-        <p><a class="btn btn-success" href="/classes">Check out our classes</a></p>
-        <p><a class="btn btn-success" href="/structure">learn more about our school</a></p>
+        <p><a class="btn btn-success" href="/courses">Check out our classes</a></p>
+        <p><a class="btn btn-success" href="<%= our_program_url %>">learn more about our program</a></p>
       </section>
     </div>
   </div>
