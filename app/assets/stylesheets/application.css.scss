@@ -42,11 +42,15 @@ body {
   padding-top: 1.2em;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   border-color: #4caf50;
 }
 
-/* Navbar */
+/* Nav */
 
 .navbar .container-fluid {
   width: 1170px;
@@ -56,6 +60,16 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .impt-copy p {
   line-height: 1.6;
   font-size: 1.4em;
+}
+
+.internal-links {
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 1.4em;
+  line-height: 1.4;
+  li {
+    padding-bottom: 0.4em;
+  }
 }
 
 /* Home */
@@ -140,4 +154,10 @@ footer {
 .about-image {
   padding-bottom: 1em;
   margin: 0 auto;
+}
+
+/* Our program */
+.our-program h3 {
+  margin-top: -60px;
+  padding: 70px 0 0 0;/*add approx 1.1em in px for top padding here*/
 }
