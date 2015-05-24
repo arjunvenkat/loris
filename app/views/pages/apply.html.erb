@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Apply for a course</h1>
+      <form action="">
+        <h2>1. Choose a course</h2>
+        <div class="form-group">
+          <label for="course" class="sr-only">Course</label>
+          <select name="course" id="course" class="form-control">
+            <option value="website design">Website Design - Phase 1</option>
+            <option value="web app development - phase 1">Web App Development - Phase 1</option>
+          </select>
+        </div>
+        <h2>2. Choose a day and time</h2>
+        <div class="form-group">
+          <label for="section" class="sr-only">Section</label>
+          <select name="section" id="section" class="form-control">
+            <option value="6-16-2015-1600">Tuesdays at 4pm, starting on June 16th, 2015 </option>
+            <option value="6-16-2015-1700">Tuesdays at 5pm, starting on June 16th, 2015</option>
+          </select>
+        </div>
+        <button class="btn btn-success">Submit application</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $('select[name=course]').change(function(){
+    var selectedCourse = $('select[name=course]').val();
+    if (selectedCourse == 'web app development - phase 1') {
+    $('select[name=section]').html('<option value="6-18-2015-1600">Thursdays at 4pm, starting on June 18th, 2015 </option><option value="6-18-2015-1700">Thursdays at 5pm, starting on June 18th, 2015</option>')
+    } else {
+      $('select[name=section]').html('<option value="6-16-2015-1600">Tuesdays at 4pm, starting on June 16th, 2015 </option><option value="6-16-2015-1700">Tuesdays at 5pm, starting on June 16th, 2015</option>')
+    }
+  });
+</script>
