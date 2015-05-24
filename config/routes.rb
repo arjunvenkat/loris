@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/courses' => 'pages#courses'
   get '/courses/html' => 'pages#html'
-  get '/html' => 'pages#html'
   get '/courses/rails_1' => 'pages#rails_1'
   get '/our_program' => 'pages#our_program', as: 'our_program'
   get '/pricing' => 'pages#pricing'
