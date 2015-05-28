@@ -3,7 +3,7 @@
     <div class="col-md-8 col-md-offset-2">
       <h1>Apply for a course</h1>
       <form action="">
-        <h2>1. Choose a course</h2>
+        <h3>1. Choose a course</h3>
         <div class="form-group">
           <label for="course" class="sr-only">Course</label>
           <select name="course" id="course" class="form-control">
@@ -11,13 +11,50 @@
             <option value="web app development - phase 1">Web app development - Phase 1</option>
           </select>
         </div>
-        <h2>2. Choose a day and time</h2>
+        <h3>2. Choose a day and time</h3>
         <div class="form-group">
           <label for="section" class="sr-only">Section</label>
           <select name="section" id="section" class="form-control">
             <option value="6-16-2015-1600">Tuesdays at 4pm, starting on June 16th, 2015 </option>
             <option value="6-16-2015-1700">Tuesdays at 5pm, starting on June 16th, 2015</option>
           </select>
+        </div>
+        <h3>3. Fill out the following form</h3>
+        <p>If you're a parent applying for your child, please also include your contact info</p>
+        <div class="form-group">
+          <label for="first_name">Student first name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Student last name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Student email</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="parent_name">Parent name (optional)</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="parent_email">Parent email (optional)</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="reference">How did you find out about us?</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="prior_experience">Have you already had some coding experience? If so, explain below.</label>
+          <textarea type="text" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <button type='submit' class='btn btn-default'>Submit your application</button>
         </div>
       </form>
     </div>
