@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :applications
   resources :course_ideas
   resources :contacts
   root 'pages#home'

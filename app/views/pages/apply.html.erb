@@ -2,61 +2,61 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h1>Apply for a course</h1>
-      <form action="">
+      <%= form_for(@application) do |f| %>
         <h3>1. Choose a course</h3>
         <div class="form-group">
-          <label for="course" class="sr-only">Course</label>
-          <select name="course" id="course" class="form-control">
-            <option value="website design">Website design</option>
-            <option value="web app development - phase 1">Web app development - Phase 1</option>
-          </select>
+          <%= f.label :course, class: 'sr-only' %>
+          <%= f.select :course, options_for_select([
+                ['Website design', 'website design'],
+                ['Web app development - Phase 1', 'web app development - phase 1']
+              ], @application.course), {}, {class: 'form-control'} %>
         </div>
         <h3>2. Choose a day and time</h3>
         <div class="form-group">
-          <label for="section" class="sr-only">Section</label>
-          <select name="section" id="section" class="form-control">
-            <option value="6-16-2015-1600">Tuesdays at 4pm, starting on June 16th, 2015 </option>
-            <option value="6-16-2015-1700">Tuesdays at 5pm, starting on June 16th, 2015</option>
-          </select>
+          <%= f.label :section, class: 'sr-only' %>
+          <%= f.select :section, options_for_select([
+                ['Tuesdays at 4pm, starting on June 16th, 2015', '16-6-2015 16:00 -0500'],
+                ['Tuesdays at 5pm, starting on June 16th, 2015', '16-6-2015 17:00 -0500']
+              ], @application.section), {}, {class: 'form-control'} %>
         </div>
         <h3>3. Fill out the following form</h3>
         <p>If you're a parent applying for your child, please also include your contact info</p>
         <div class="form-group">
-          <label for="first_name">Student first name</label>
-          <input type="text" class="form-control">
+          <%= f.label :student_first_name, 'Student first name' %>
+          <%= f.text_field :student_first_name, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="last_name">Student last name</label>
-          <input type="text" class="form-control">
+          <%= f.label :student_last_name, 'Student last name' %>
+          <%= f.text_field :student_last_name, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="email">Student email</label>
-          <input type="text" class="form-control">
+          <%= f.label :student_email, 'Student email' %>
+          <%= f.email_field :student_email, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="parent_name">Parent name (optional)</label>
-          <input type="text" class="form-control">
+          <%= f.label :parent_name, 'Parent name (optional)' %>
+          <%= f.text_field :parent_name, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="parent_email">Parent email (optional)</label>
-          <input type="text" class="form-control">
+          <%= f.label :parent_email, 'Parent email (optional)' %>
+          <%= f.text_field :parent_email, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input type="text" class="form-control">
+          <%= f.label :phone, 'Phone number' %>
+          <%= f.text_field :phone, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="reference">How did you find out about us?</label>
-          <input type="text" class="form-control">
+          <%= f.label :reference, 'How did you find out about us?' %>
+          <%= f.text_field :reference, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <label for="prior_experience">Have you already had some coding experience? If so, explain below.</label>
-          <textarea type="text" class="form-control" rows="4"></textarea>
+          <%= f.label :experience, 'Have you already had some coding experience? If so, explain below.' %>
+          <%= f.text_area :experience, class: 'form-control', rows: 4 %>
         </div>
         <div class="form-group">
           <button type='submit' class='btn btn-default'>Submit your application</button>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
@@ -66,9 +66,9 @@
   $('select[name=course]').change(function(){
     var selectedCourse = $('select[name=course]').val();
     if (selectedCourse == 'web app development - phase 1') {
-    $('select[name=section]').html('<option value="6-18-2015-1600">Thursdays at 4pm, starting on June 18th, 2015 </option><option value="6-18-2015-1700">Thursdays at 5pm, starting on June 18th, 2015</option>')
+    $('select[name=section]').html('<option value="18-6-2015 16:00 -0500">Thursdays at 4pm, starting on June 18th, 2015 </option><option value="18-6-2015 17:00 -0500">Thursdays at 5pm, starting on June 18th, 2015</option>')
     } else {
-      $('select[name=section]').html('<option value="6-16-2015-1600">Tuesdays at 4pm, starting on June 16th, 2015 </option><option value="6-16-2015-1700">Tuesdays at 5pm, starting on June 16th, 2015</option>')
+      $('select[name=section]').html('<option value="16-6-2015 16:00 -0500">Tuesdays at 4pm, starting on June 16th, 2015 </option><option value="16-6-2015 17:00 -0500">Tuesdays at 5pm, starting on June 16th, 2015</option>')
     }
   });
 </script>

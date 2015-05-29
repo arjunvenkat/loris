@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def courses
     @course_idea = CourseIdea.new
   end
+
+  def apply
+    @application = Application.new
+  end
 end

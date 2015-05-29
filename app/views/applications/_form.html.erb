@@ -1,0 +1,57 @@
+<%= form_for(@application) do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course %><br>
+    <%= f.text_field :course %>
+  </div>
+  <div class="field">
+    <%= f.label :section %><br>
+    <%= f.text_field :section %>
+  </div>
+  <div class="field">
+    <%= f.label :student_first_name %><br>
+    <%= f.text_field :student_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :student_last_name %><br>
+    <%= f.text_field :student_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :student_email %><br>
+    <%= f.text_field :student_email %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_name %><br>
+    <%= f.text_field :parent_name %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_email %><br>
+    <%= f.text_field :parent_email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :reference %><br>
+    <%= f.text_field :reference %>
+  </div>
+  <div class="field">
+    <%= f.label :experience %><br>
+    <%= f.text_area :experience %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
