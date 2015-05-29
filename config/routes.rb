@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :applications
   resources :course_ideas
   resources :contacts
   root 'pages#home'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get '/our_program' => 'pages#our_program', as: 'our_program'
   get '/pricing' => 'pages#pricing'
   get '/about' => 'pages#about'
+  get '/apply' => 'pages#apply'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
