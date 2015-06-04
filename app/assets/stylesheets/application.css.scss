@@ -57,8 +57,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 
 /* Nav */
 
-.navbar .container-fluid {
-  width: 1170px;
+.navbar {
+  // -webkit-box-shadow: none;
+  // box-shadow: none;
+  .container-fluid {
+    width: 1170px;
+  }
 }
 
 .impt-copy p {
@@ -77,14 +81,18 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 /* Home */
+.jumbotron {
+  background-color: #FFF;
 
-.jumbotron .main-heading {
-  color: $primary-color;
-  font-size: 4em;
-}
+  .main-heading {
+    color: $primary-color;
+    font-size: 2.6em;
+  }
 
-.jumbotron h1 {
-  border: none;
+  h1 {
+    border: none;
+  }
+
 }
 
 .form-inline .form-control {
@@ -126,14 +134,7 @@ select:focus, select.form-control:focus {
   margin-top: 1em;
 }
 
-@media (min-width: 768px) {
-  .class-list-btn {
-    position: absolute;
-    left: auto;
-    bottom: 3px;
-    right: 3px;
-  }
-}
+
 
 /* Forms */
 
@@ -169,4 +170,22 @@ footer {
 .our-program h3 {
   margin-top: -60px;
   padding: 70px 0 0 0;/*add approx 1.1em in px for top padding here*/
+}
+
+
+
+@media (min-width: 768px) {
+  .class-list-btn {
+    position: absolute;
+    left: auto;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  .jumbotron {
+    .main-heading {
+      font-size: 4em;
+    }
+  }
+
 }
