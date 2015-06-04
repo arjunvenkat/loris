@@ -27,7 +27,14 @@ class ApplicationsController < ApplicationController
     @application = Application.new(application_params)
     respond_to do |format|
       if @application.save
-        StudentApplicationMailer.application_confirmation(@application).deliver_now
+        begin
+          StudentApplicationMailer.application_confirmation(@application, @application.student_email).deliver_now
+          if @application.parent_email.present?
+            StudentApplicationMailer.application_confirmation(@application, @application.parent_email).deliver_now
+          end
+        rescue
+          puts "error delivering email"
+        end
         format.html { redirect_to '/', notice: 'Thanks for your application! Check your email for a confirmation' }
         format.json { render :show, status: :created, location: @application }
       else
