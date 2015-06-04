@@ -1,3 +1,17 @@
+<% if @contact.errors.any? %>
+  <div class="container spacer">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <% @contact.errors.full_messages.each do |message| %>
+          <div class="alert alert-dismissable alert-warning">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
 <div class="jumbotron">
   <div class="container">
     <div class="row">
@@ -5,18 +19,6 @@
         <h1 class="main-heading">Learn to code by designing and building your own projects</h1>
         <!-- <h2>learn to code by building your own projects</h2> -->
         <%= form_for(@contact, html: {class: 'form-inline spacer'} ) do |f| %>
-          <% if @contact.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-              <ul>
-              <% @contact.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
-
           <div class="form-group">
             <%= f.label :email, class: 'sr-only' %>
             <%= f.text_field :email, class: 'form-control', placeholder: 'linus.torvalds@example.com'  %>

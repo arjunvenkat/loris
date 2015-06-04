@@ -3,6 +3,14 @@
     <div class="col-md-8 col-md-offset-2">
       <h1>Apply for a course</h1>
       <%= form_for(@application) do |f| %>
+        <% if @application.errors.any? %>
+          <% @application.errors.full_messages.each do |message| %>
+            <div class="alert alert-dismissable alert-warning">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <%= message %>
+            </div>
+          <% end %>
+        <% end %>
         <h3>1. Choose a course</h3>
         <div class="form-group">
           <%= f.label :course, class: 'sr-only' %>

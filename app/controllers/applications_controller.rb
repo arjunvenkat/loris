@@ -31,7 +31,7 @@ class ApplicationsController < ApplicationController
         format.html { redirect_to '/', notice: 'Thanks for your application! Check your email for a confirmation' }
         format.json { render :show, status: :created, location: @application }
       else
-        format.html { render :new }
+        format.html { render 'pages/apply' }
         format.json { render json: @application.errors, status: :unprocessable_entity }
       end
     end
