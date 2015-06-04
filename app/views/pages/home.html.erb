@@ -21,7 +21,7 @@
         <%= form_for(@contact, html: {class: 'form-inline spacer'} ) do |f| %>
           <div class="form-group">
             <%= f.label :email, class: 'sr-only' %>
-            <%= f.text_field :email, class: 'form-control', placeholder: 'linus.torvalds@example.com'  %>
+            <%= f.email_field :email, class: 'form-control', placeholder: 'linus.torvalds@example.com'  %>
           </div>
 
             <%= f.submit class: 'btn btn-default', value: 'Keep me informed'  %>

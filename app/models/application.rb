@@ -4,5 +4,5 @@ class Application < ActiveRecord::Base
             :student_email, presence: true
 
   validates :student_email,
-            :parent_email, format: { :with => /@/ }
+            :parent_email, format: { :with => /@/ }, allow_blank: true
 end
