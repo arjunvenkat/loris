@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/pricing' => 'pages#pricing'
   get '/about' => 'pages#about'
   get '/apply' => 'pages#apply'
+  get '/privacy_policy' => 'pages#privacy_policy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
