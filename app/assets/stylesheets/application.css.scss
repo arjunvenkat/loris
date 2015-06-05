@@ -174,6 +174,48 @@ footer {
 }
 
 
+/* Pricing */
+.pricing {
+  padding-top: 2em;
+  .price {
+    color: $primary-color;
+    font-size: 10em;
+    text-align: center;
+    line-height: 0.8em;
+    .currency {
+      font-size: .8em;
+      vertical-align: middle;
+    }
+  }
+  .timeframe {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .features {
+
+
+    p {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      font-size: 1.6em;
+      padding-left: 1em;
+      // list-style-type: none;
+    }
+
+    li {
+      line-height: 1.6em;
+    }
+
+    .footnote {
+      font-size: 1em;
+    }
+  }
+}
+
 
 @media (min-width: 768px) {
   .class-list-btn {
