@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container apply">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h1>Apply for a course</h1>
@@ -11,23 +11,31 @@
             </div>
           <% end %>
         <% end %>
-        <h3>1. Choose a course</h3>
+        <h4>1. Choose a course</h4>
         <div class="form-group">
           <%= f.label :course, class: 'sr-only' %>
-          <%= f.select :course, options_for_select([
-                ['Website design', 'website design'],
-                ['Web app development - Phase 1', 'web app development - phase 1']
-              ], @application.course), {}, {class: 'form-control'} %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.select :course, options_for_select([
+                  ['Website design - Phase 1', 'website design - phase 1'],
+                  ['Web app development - Phase 1', 'web app development - phase 1']
+                ], @application.course), {}, {class: 'form-control'} %>
+            </div>
+          </div>
         </div>
-        <h3>2. Choose a day and time</h3>
+        <h4>2. Choose a day and time</h4>
         <div class="form-group">
           <%= f.label :section, class: 'sr-only' %>
-          <%= f.select :section, options_for_select([
-                ['Tuesdays at 4pm, starting on June 16th, 2015', '16-6-2015 16:00 -0500'],
-                ['Tuesdays at 5pm, starting on June 16th, 2015', '16-6-2015 17:00 -0500']
-              ], @application.section), {}, {class: 'form-control'} %>
+          <div class="row">
+            <div class="col-md-7">
+              <%= f.select :section, options_for_select([
+                    ['Tuesdays at 4pm, starting on June 16th, 2015', '16-6-2015 16:00 -0500'],
+                    ['Tuesdays at 5pm, starting on June 16th, 2015', '16-6-2015 17:00 -0500']
+                  ], @application.section), {}, {class: 'form-control'} %>
+            </div>
+          </div>
         </div>
-        <h3>3. Fill out the following form</h3>
+        <h4>3. Fill out the following form</h4>
         <p>If you're a parent applying for your child, please also include your contact info</p>
         <div class="row">
           <div class="col-md-6">
