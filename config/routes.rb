@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/courses' => 'pages#courses'
   get '/courses/html_1' => 'pages#html_1'
   get '/courses/rails_1' => 'pages#rails_1'
+  get '/courses/game_dev_1' => 'pages#game_dev_1'
   get '/our_program' => 'pages#our_program', as: 'our_program'
   get '/pricing' => 'pages#pricing'
   get '/about' => 'pages#about'
