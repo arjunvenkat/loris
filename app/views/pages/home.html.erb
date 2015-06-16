@@ -1,43 +1,45 @@
 <% if @contact.errors.any? %>
-  <div class="container spacer">
-    <div class="row">
-      <div class="col-md-12">
+  <!-- <div class="container spacer"> -->
+    <!-- <div class="row"> -->
+      <!-- <div class="col-md-12"> -->
         <% @contact.errors.full_messages.each do |message| %>
           <div class="alert alert-dismissable alert-warning">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <%= message %>
           </div>
         <% end %>
-      </div>
-    </div>
-  </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
 <% end %>
-<div class="jumbotron">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h1 class="main-heading">Learn to code by designing and building your own projects</h1>
-        <!-- <h2>learn to code by building your own projects</h2> -->
-        <%= form_for(@contact, html: {class: 'form-inline spacer'} ) do |f| %>
-          <div class="form-group">
-            <%= f.label :email, class: 'sr-only' %>
-            <%= f.email_field :email, class: 'form-control', placeholder: 'linus.torvalds@example.com'  %>
-          </div>
+<div class="home-bg">
+  <div class="home-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>Learn to code by designing and building your own projects</h1>
+          <%= form_for(@contact, html: {class: 'form-inline spacer'} ) do |f| %>
+            <div class="form-group">
+              <%= f.label :email, class: 'sr-only' %>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'linus.torvalds@example.com'  %>
+            </div>
 
-            <%= f.submit class: 'btn btn-default', value: 'Keep me informed'  %>
+              <%= f.submit class: 'btn btn-success', value: 'Keep me informed'  %>
 
-        <% end %>
-
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
+
+
+<div class="container spacer-2">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <section class="impt-copy">
-        <p>Loris is an online technology school. You'll learn by coming up with your <strong>own</strong> ideas and making them real with code.</p>
+        <p>Loris is an online technology school for middle and high-school students. You'll learn by coming up with your <strong>own</strong> ideas and making them real with code.</p>
 
         <p>It's not fun to work on projects created by other people. But designing your own projects from scratch can be hard. We're here to make sure you build something awesome.</p>
 
