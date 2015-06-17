@@ -18,6 +18,8 @@
 /* Colors */
 
 $primary-color: #4caf50;
+$spacer-size: 16px;
+
 
 /* Global */
 html, body {
@@ -48,11 +50,23 @@ body {
   padding-top: 66px;
 }
 .spacer {
-  padding-top: 1.2em;
+  padding-top: $spacer-size;
 }
 
 .spacer-2 {
-  padding-top: 2.6em;
+  padding-top: 2 * $spacer-size;
+}
+
+.spacer-4 {
+  padding-top: 4 * $spacer-size
+}
+
+.spacer-7 {
+  padding-top: 7 * $spacer-size
+}
+
+.spacer-10 {
+  padding-top: 10 * $spacer-size
 }
 
 .invisible {
@@ -110,6 +124,14 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     border-bottom: none;
     color: white;
   }
+}
+
+.home-subheading {
+  text-align: center;
+}
+
+h4.home-subheading {
+  color: gray;
 }
 
 .jumbotron {
