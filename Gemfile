@@ -5,8 +5,10 @@ gem 'rails', '4.2.1'
 gem 'pg'
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'rspec'
 
-group :development do
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do
