@@ -28,6 +28,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        ContactMailer.new_contact(@contact).deliver_now
         format.html { redirect_to root_url, notice: 'Thanks! We\'ll keep you in the loop' }
         format.json { render :show, status: :created, location: @contact }
       else
