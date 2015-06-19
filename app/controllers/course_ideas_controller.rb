@@ -28,6 +28,7 @@ class CourseIdeasController < ApplicationController
 
     respond_to do |format|
       if @course_idea.save
+        CourseIdeaMailer.new_course_idea(@course_idea).deliver_now
         format.html { redirect_to :back, notice: 'Thanks for your feedback!' }
         format.json { render :show, status: :created, location: @course_idea }
       else
