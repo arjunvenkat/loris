@@ -3,23 +3,23 @@ class CourseIdeasController < ApplicationController
 
   # GET /course_ideas
   # GET /course_ideas.json
-  def index
-    @course_ideas = CourseIdea.all
-  end
+  # def index
+  #   @course_ideas = CourseIdea.all
+  # end
 
   # GET /course_ideas/1
   # GET /course_ideas/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /course_ideas/new
-  def new
-    @course_idea = CourseIdea.new
-  end
+  # def new
+  #   @course_idea = CourseIdea.new
+  # end
 
   # GET /course_ideas/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /course_ideas
   # POST /course_ideas.json
@@ -40,27 +40,27 @@ class CourseIdeasController < ApplicationController
 
   # PATCH/PUT /course_ideas/1
   # PATCH/PUT /course_ideas/1.json
-  def update
-    respond_to do |format|
-      if @course_idea.update(course_idea_params)
-        format.html { redirect_to @course_idea, notice: 'Course idea was successfully updated.' }
-        format.json { render :show, status: :ok, location: @course_idea }
-      else
-        format.html { render :edit }
-        format.json { render json: @course_idea.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @course_idea.update(course_idea_params)
+  #       format.html { redirect_to @course_idea, notice: 'Course idea was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @course_idea }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @course_idea.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /course_ideas/1
   # DELETE /course_ideas/1.json
-  def destroy
-    @course_idea.destroy
-    respond_to do |format|
-      format.html { redirect_to course_ideas_url, notice: 'Course idea was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @course_idea.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to course_ideas_url, notice: 'Course idea was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

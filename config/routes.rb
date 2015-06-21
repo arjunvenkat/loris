@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :applications
-  resources :course_ideas
-  resources :contacts
   root 'pages#home'
+
+  post '/applications' => 'applications#create', as: 'applications'
+  post '/course_ideas' => 'course_ideas#create', as: 'course_ideas'
+  post '/contacts' => 'contacts#create', as: 'contacts'
+
   get '/courses' => 'pages#courses'
   get '/courses/html_1' => 'pages#html_1'
   get '/courses/rails_1' => 'pages#rails_1'
