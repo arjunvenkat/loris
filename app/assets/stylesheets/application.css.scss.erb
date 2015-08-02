@@ -125,6 +125,10 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   }
 }
 
+.btn-home {
+  margin-top: 1em;
+}
+
 .home-subheading {
   text-align: center;
 }
@@ -147,6 +151,19 @@ h4.home-subheading {
 
 }
 
+.program-skills {
+  margin-top: 6em;
+
+  .fa {
+    font-size: 4em;
+    margin-right: 24px;
+  }
+  .fa-lightbulb-o {
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+  }
+}
+
 .form-inline .form-control {
   width: 300px;
 }
@@ -164,6 +181,8 @@ select:focus, select.form-control:focus {
 .course-img {
   height: 100px;
 }
+
+
 
 
 /* Class page */
@@ -186,6 +205,18 @@ select:focus, select.form-control:focus {
   margin-top: 1em;
 }
 
+.skill-list {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.cost {
+  color: $primary-color;
+  font-size: 4em;
+  line-height: 1;
+}
 
 
 /* Forms */
@@ -326,6 +357,37 @@ footer {
     h1 {
       padding-top: 40%;
       font-size: 4em;
+    }
+  }
+
+}
+
+@media (min-width: 1080px) {
+  .home-header {
+    h1 {
+      padding-top: 30%;
+      font-size: 4em;
+    }
+  }
+
+  .btn-home {
+    margin-top: 0;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .class-list-btn {
+    position: absolute;
+    left: auto;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  .home-header {
+    h1 {
+      padding-top: 44%;
+      font-size: 6em;
     }
   }
 

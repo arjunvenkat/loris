@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>Loris</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -38,9 +39,10 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/apply">Apply</a></li>
         <li><a href="/courses">Courses</a></li>
         <li><a href="<%= our_program_url %>">Our program</a></li>
-        <li><a href="/pricing">Pricing</a></li>
+        <!-- <li><a href="/pricing">Pricing</a></li> -->
         <li><a href="/about">About</a></li>
       </ul>
 
@@ -73,7 +75,7 @@
           <li><a href="/apply">Apply</a></li>
           <li><a href="/courses">Courses</a></li>
           <li><a href="<%= our_program_url %>">Our program</a></li>
-          <li><a href="/pricing">Pricing</a></li>
+          <!-- <li><a href="/pricing">Pricing</a></li> -->
           <li><a href="/about">About</a></li>
         </ul>
       </div>
