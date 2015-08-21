@@ -1,14 +1,16 @@
 class Section < ActiveRecord::Base
+  self.skip_time_zone_conversion_for_attributes = [:start_date_time]
+
   belongs_to :course
 
   def formatted_timeframe
-    "#{formatted_time(start_date_time)} to #{formatted_time(start_date_time + course.weeks.weeks)}"
+    "#{formatted_date(start_date_time)} to #{formatted_date(start_date_time + course.weeks.weeks)} on #{start_date_time.strftime('%A')}s at #{start_date_time.strftime('%l:%M %p CST')}"
   end
 
   private
-    def formatted_time(time)
+    def formatted_date(time)
       time
         .in_time_zone("Central Time (US & Canada)")
-        .strftime('%a,  %b %d %Y at %l:%M %p CST')
+        .strftime('%b %d %Y')
     end
 end
