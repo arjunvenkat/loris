@@ -5,4 +5,7 @@ class Application < ActiveRecord::Base
 
   validates :student_email,
             :parent_email, format: { :with => /@/ }, allow_blank: true
+
+  belongs_to :course
+  belongs_to :section
 end

@@ -17,7 +17,13 @@
           <%= f.label :course, class: 'sr-only' %>
           <div class="row">
             <div class="col-md-6">
-              <%= f.select :course, options_for_select([
+              <%= f.collection_select :course_id,
+                                      Course.all,
+                                      :id,
+                                      :name,
+                                      {},
+                                      class: 'form-control' %>
+              <%#= f.select :course, options_for_select([
                   ['Website design - Phase 1', 'website design - phase 1'],
                   ['Web app development - Phase 1', 'web app development - phase 1'],
                   ['Game development - Phase 1', 'game development - phase 1']
@@ -25,18 +31,26 @@
             </div>
           </div>
         </div>
-        <!-- <h4>2. Choose a day and time</h4>
+        <h4>2. Choose a day and time</h4>
         <div class="form-group">
           <%= f.label :section, class: 'sr-only' %>
           <div class="row">
-            <div class="col-md-7">
-              <%= f.select :section, options_for_select([
+            <div class="col-md-8">
+              <%= f.grouped_collection_select :section_id,
+                                              Course.all,
+                                              :sections,
+                                              :name,
+                                              :id,
+                                              :formatted_timeframe,
+                                              {},
+                                              class: 'form-control' %>
+              <%#= f.select :section, options_for_select([
                     ['Wednesdays at 3pm, starting on August 5th, 2015', '8-1-2015 15:00 -0500']
                   ], @application.section), {}, {class: 'form-control'} %>
             </div>
           </div>
-        </div> -->
-        <h4>2. Fill out the following form</h4>
+        </div>
+        <h4>3. Fill out the following form</h4>
         <p>If you're a parent applying for your child, please also include your contact info</p>
         <div class="row">
           <div class="col-md-6">

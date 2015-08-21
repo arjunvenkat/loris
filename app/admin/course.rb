@@ -13,7 +13,8 @@ ActiveAdmin.register Course do
                 :end_goal_desc,
                 :end_goal_image,
                 :end_goal_link,
-                :timeline
+                :timeline,
+                :weeks
   #
   # or
   #
