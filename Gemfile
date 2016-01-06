@@ -6,6 +6,8 @@ gem 'pg'
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'rspec'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootswatch-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

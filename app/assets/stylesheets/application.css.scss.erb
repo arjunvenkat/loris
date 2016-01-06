@@ -10,20 +10,34 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap.min
  *= require_self
  */
 
+@import "bootstrap-sprockets";
+@import "bootswatch/paper/variables";
 
-/* Colors */
 
-$primary-color: #4caf50;
+/* Custom variables */
+
+$primary-color: #3b2314;
+$primary-color-2: #8a5d3b;
+$primary-color-3: #f05a28;
+$primary-color-4: #f7931d;
 $spacer-size: 16px;
+$link-color: $primary-color-4;
+$link-hover-color: darken($link-color, 15%);
+
+@import "bootstrap";
+@import "bootswatch/paper/bootswatch";
 
 
 /* Global */
 html, body {
   height: 100%;
+}
+
+.loris-btn-primary {
+  @include button-variant(white, $primary-color-3, rgba(255,255,255,0));
 }
 
 
@@ -84,6 +98,14 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   // box-shadow: none;
   .container-fluid {
     width: 1170px;
+  }
+
+  .navbar-home-link {
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    height: 40px;
   }
 }
 
