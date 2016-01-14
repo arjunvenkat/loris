@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :concepts
+  resources :exercises
+  resources :roadmaps
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'pages#home'
@@ -16,6 +19,10 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/apply' => 'pages#apply'
   get '/privacy_policy' => 'pages#privacy_policy'
+
+  resources :courses do
+    resources :roadmaps
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

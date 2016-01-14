@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+c1 = Course.create(name: 'Game Development - Phase 1')
+ro1 = Roadmap.create(course_id: c1.id, name: 'Version 1' )
+co1 = Concept.create(roadmap_id: ro1.id, title: 'First', content: 'Test')
+ex1 = Exercise.create(concept_id: co1.id, url: 'http://jsbin.com')
+

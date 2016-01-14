@@ -8,6 +8,7 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'rspec'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
+gem 'acts_as_list'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

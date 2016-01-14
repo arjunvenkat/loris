@@ -1,21 +1,5 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_self
- */
-
 @import "bootstrap-sprockets";
 @import "bootswatch/paper/variables";
-
 
 /* Custom variables */
 
@@ -30,6 +14,8 @@ $link-hover-color: darken($link-color, 15%);
 @import "bootstrap";
 @import "bootswatch/paper/bootswatch";
 
+
+@import "exercises";
 
 /* Global */
 html, body {
@@ -63,6 +49,11 @@ h4 {
 body {
   padding-top: 66px;
 }
+
+.margin-spacer {
+  margin-top: 2 * $spacer-size;
+}
+
 .spacer {
   padding-top: $spacer-size;
 }
@@ -331,6 +322,11 @@ footer {
 
 
 /* Bootstrap Overrides*/
+
+.panel {
+  margin-bottom: 0;
+}
+
 .alert {
   margin-bottom: 0;
   border-radius: 0;

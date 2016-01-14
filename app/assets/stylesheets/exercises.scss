@@ -1,0 +1,10 @@
+// Place all the styles related to the exercises controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.vert-line {
+  width: 2px; /* Line width */
+  background-color: lightgray; /* Line color */
+  height: 30px; /* Override in-line if you want specific height. */
+  margin: 0 auto;
+}
