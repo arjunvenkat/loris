@@ -2,25 +2,28 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1><%= @roadmap.course.name %></h1>
-      <% @roadmap.concepts.each do |concept| %>
-        <div class="full-concept">
-          <div class="panel panel-default">
-            <div class="panel-body concept-card">
-              <h2 class="media-heading"><%= concept.title %></h2>
-              <%= concept.content.html_safe %>
-            </div>
-          </div>
-          <% concept.exercises.each do |exercise| %>
-            <div class="vert-line"></div>
+      <% @roadmap.topics.each do |topic| %>
+        <h2><%= topic.name %></h2>
+        <% topic.concepts.each do |concept| %>
+          <div class="full-concept">
             <div class="panel panel-default">
-              <div class="panel-body">
-                <h2 class="media-heading"><%= exercise.concept.title %></h2>
-                <h4 class="media-heading">Exercise <%= exercise.position %></h4>
-                <%= link_to exercise.url, exercise.url %>
+              <div class="panel-body concept-card">
+                <h3 class="media-heading"><%= concept.title %></h3>
+                <%= concept.content.html_safe %>
               </div>
             </div>
-          <% end %>
-        </div>
+            <% concept.exercises.each do |exercise| %>
+              <div class="vert-line"></div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <h2 class="media-heading"><%= exercise.concept.title %></h2>
+                  <h4 class="media-heading">Exercise <%= exercise.position %></h4>
+                  <%= link_to exercise.url, exercise.url %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

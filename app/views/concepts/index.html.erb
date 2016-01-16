@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Roadmap</th>
+      <th>Topic</th>
       <th>Position</th>
       <th>Title</th>
       <th>Content</th>
@@ -17,6 +18,7 @@
     <% @concepts.each do |concept| %>
       <tr>
         <td><%= concept.roadmap_id %></td>
+        <td><%= concept.topic_id %></td>
         <td><%= concept.position %></td>
         <td><%= concept.title %></td>
         <td><%= concept.content %></td>
