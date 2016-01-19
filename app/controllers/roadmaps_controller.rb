@@ -2,7 +2,7 @@ class RoadmapsController < InheritedResources::Base
 
   private
 
-    def exercise_params
-      params.require(:exercise).permit(:resource_id, :url, :position)
+    def roadmap_params
+      params.require(:roadmap).permit(:course_id, :name)
     end
 end
