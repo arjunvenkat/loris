@@ -1,10 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-3 impt-copy">
+      <h1 class="invisible">links</h1>
+      <ul class="internal-links">
+        <% @roadmap.topics.each do |topic| %>
+          <div class="topic-links">
+            <li class="topic-title"><%= topic.position %>. <%= topic.name %></li>
+            <% topic.concepts.each do |concept| %>
+              <li><a href="#concept-<%= concept.id %>"><%= concept.title %></a></li>
+            <% end %>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-6 col-md-offset-1">
       <h1><%= @roadmap.course.name %></h1>
       <% @roadmap.topics.each do |topic| %>
         <h2><%= topic.name %></h2>
         <% topic.concepts.each do |concept| %>
+          <a id="concept-<%= concept.id %>" class="anchor"></a>
           <div class="full-concept">
             <div class="panel panel-default">
               <div class="panel-body concept-card">
