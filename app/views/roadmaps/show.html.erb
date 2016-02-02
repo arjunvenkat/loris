@@ -30,9 +30,9 @@
               <div class="vert-line"></div>
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <h2 class="media-heading"><%= exercise.concept.title %></h2>
-                  <h4 class="media-heading">Exercise <%= exercise.position %></h4>
-                  <%= link_to exercise.url, exercise.url %>
+                  <h4 class="media-heading">Exercise <%= exercise.position %> - <%= exercise.concept.title %></h4>
+                  <p><%= exercise.description %></p>
+                  <%= link_to exercise.url, exercise.url, target: '_blank' %>
                 </div>
               </div>
             <% end %>

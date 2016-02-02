@@ -13,7 +13,11 @@
 
   <div class="field">
     <%= f.label :concept_id %><br>
-    <%= f.number_field :concept_id %>
+    <%= f.collection_select :concept_id, Concept.all, :id, :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :url %><br>
