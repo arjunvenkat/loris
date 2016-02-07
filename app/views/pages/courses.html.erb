@@ -6,24 +6,52 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left">
-              <a href="/courses/html_1">
-                <img class="media-object course-img" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="html5">
+              <a href="#">
+                <img class="media-object course-img" src="http://examples.phaser.io/assets/sprites/phaser2.png" alt="rails">
               </a>
             </div>
             <div class="media-body">
-              <h4 class="media-heading">Website Design - Phase 1</h4>
-              <div>Create beautiful, single-page sites. You'll learn how to use HTML and CSS - the basic building blocks of every website and web application.</div>
+              <h4 class="media-heading">Game Development - Phase 1</h4>
+              <div>Design your own 2D platformer. You'll learn the basics of programming in JavaScript and create your own web-based game using the Phaser framework.</div>
               <hr>
               <div class="panel-box">
                 <div><strong>Level:</strong> beginner</div>
-                <div><strong>Prerequisites:</strong> none</div>
-                <a class="class-list-btn btn btn-default" href="/courses/html_1">Learn more</a>
+                <div>
+                  <strong>Prerequisites:</strong>
+                  none
+                </div>
+                <a class="class-list-btn btn btn-default" href="/courses/game_dev_1">Learn more</a>
 
               </div>
             </div>
           </div>
         </div>
       </div>
+ <!--      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object course-img" src="http://colouringbook.org/openclipart.org/2013/March/colouringbook.org/cat_scratch.png" alt="rails">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Scratch</h4>
+              <div>Scratch is a visual programming language designed especially for young learners by the MIT Media Lab. You'll learn how to create interactive animations and games.</div>
+              <hr>
+              <div class="panel-box">
+                <div><strong>Level:</strong> beginner</div>
+                <div>
+                  <strong>Prerequisites:</strong>
+                  none
+                </div>
+                <a class="class-list-btn btn btn-default" href="/courses/scratch">Learn more</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="media">
@@ -53,27 +81,26 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left">
-              <a href="#">
-                <img class="media-object course-img" src="http://examples.phaser.io/assets/sprites/phaser2.png" alt="rails">
+              <a href="/courses/html_1">
+                <img class="media-object course-img" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="html5">
               </a>
             </div>
             <div class="media-body">
-              <h4 class="media-heading">Game Development - Phase 1</h4>
-              <div>Design your own 2D platformer. You'll learn the basics of programming in JavaScript and create your own web-based game using the Phaser framework.</div>
+              <h4 class="media-heading">Website Design - Phase 1</h4>
+              <div>Create beautiful, single-page sites. You'll learn how to use HTML and CSS - the basic building blocks of every website and web application.</div>
               <hr>
               <div class="panel-box">
                 <div><strong>Level:</strong> beginner</div>
-                <div>
-                  <strong>Prerequisites:</strong>
-                  none
-                </div>
-                <a class="class-list-btn btn btn-default" href="/courses/game_dev_1">Learn more</a>
+                <div><strong>Prerequisites:</strong> none</div>
+                <a class="class-list-btn btn btn-default" href="/courses/html_1">Learn more</a>
 
               </div>
             </div>
           </div>
         </div>
       </div>
+
+
       <%= form_for(@course_idea, html: {class: 'spacer'}) do |f| %>
         <% if @course_idea.errors.any? %>
           <div id="error_explanation">

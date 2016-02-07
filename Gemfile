@@ -9,6 +9,9 @@ gem 'rspec'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 gem 'acts_as_list'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
