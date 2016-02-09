@@ -1,0 +1,10 @@
+<ul class="internal-links">
+  <% roadmap.topics.each do |topic| %>
+    <div class="topic-links">
+      <li class="topic-title"><%= topic.position %>. <%= topic.name %></li>
+      <% topic.concepts.each do |concept| %>
+        <li><a href="<%= concept_path(concept) %>"><%= concept.title %></a></li>
+      <% end %>
+    </div>
+  <% end %>
+</ul>

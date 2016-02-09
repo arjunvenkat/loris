@@ -1,24 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1><%= @roadmap.course.name %></h1>
+  <div class="row">
+    <div class="col-md-3 impt-copy">
+      <%= render 'roadmaps/roadmap_links', roadmap: @roadmap %>
+    </div>
+    <div class="col-md-6 col-md-offset-1">
 
-<p>
-  <strong>Roadmap:</strong>
-  <%= @concept.roadmap_id %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @concept.position %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @concept.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @concept.content %>
-</p>
-
-<%= link_to 'Edit', edit_concept_path(@concept) %> |
-<%= link_to 'Back', concepts_path %>
+      <h2 class="topic-heading"><%= @concept.topic.name %></h2>
+      <a id="concept-<%= @concept.id %>" class="anchor"></a>
+      <div class="full-concept">
+        <div class="panel panel-default">
+          <div class="panel-body concept-card">
+            <h3 class="media-heading"><%= @concept.title %></h3>
+            <%= @concept.content.html_safe %>
+          </div>
+        </div>
+        <% @concept.exercises.each do |exercise| %>
+          <div class="vert-line"></div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4 class="media-heading">Exercise <%= exercise.position %> - <%= exercise.concept.title %></h4>
+              <p><%= exercise.description %></p>
+              <%= link_to exercise.url, exercise.url, target: '_blank' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <% if @concept.prev.present? %>
+        <%= link_to "<< Previous concept", concept_path(@concept.prev), class: "prev-concept-link" %>
+      <% end %>
+      <% if @concept.next.present? %>
+        <%= link_to "Next concept >>", concept_path(@concept.next), class: "next-concept-link" %>
+      <% end %>
+    </div>
+  </div>
+</div>
