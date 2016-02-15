@@ -1,0 +1,34 @@
+<div class="container">
+  <h1><%= @roadmap.course.name %></h1>
+  <div class="row">
+    <div class="col-md-3 impt-copy">
+      <%= render 'roadmaps/roadmap_links', roadmap: @roadmap %>
+    </div>
+    <div class="col-md-6 col-md-offset-1">
+      <% @roadmap.topics.each do |topic| %>
+        <h2 class="topic-heading"><%= topic.name %></h2>
+        <% topic.concepts.each do |concept| %>
+          <a id="concept-<%= concept.id %>" class="anchor"></a>
+          <div class="full-concept">
+            <div class="panel panel-default">
+              <div class="panel-body concept-card">
+                <h3 class="media-heading"><%= concept.title %></h3>
+                <%= concept.content.html_safe %>
+              </div>
+            </div>
+            <% concept.exercises.each do |exercise| %>
+              <div class="vert-line"></div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <h4 class="media-heading">Exercise <%= exercise.position %> - <%= exercise.concept.title %></h4>
+                  <p><%= exercise.description %></p>
+                  <%= link_to exercise.url, exercise.url, target: '_blank' %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

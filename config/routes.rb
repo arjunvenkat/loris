@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :enrollments
+  devise_for :users
+  resources :users, only: [:show]
   resources :uploads
   resources :topics
   resources :concepts

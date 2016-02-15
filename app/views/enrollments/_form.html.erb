@@ -1,0 +1,25 @@
+<%= form_for(@enrollment) do |f| %>
+  <% if @enrollment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+
+      <ul>
+      <% @enrollment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :user_id %><br>
+    <%= f.collection_select :user_id, User.all, :id, :email, {}, class: 'form-control'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :section_id %><br>
+    <%= f.collection_select :section_id, Section.all, :id, :with_course, {}, class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

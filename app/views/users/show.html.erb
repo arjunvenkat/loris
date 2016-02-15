@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Your profile</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Your courses</h2>
+      <div class="list-group">
+        <% @user.enrollments.each do |enrollment| %>
+          <%= link_to enrollment.section.course.name, enrollment, class: 'list-group-item' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
